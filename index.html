@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Boyina Gowtham — AI engineer, technical writer</title>
+  <meta name="description" content="Boyina Gowtham builds agentic systems end to end — orchestration, retrieval, evaluation — and writes the documentation that makes them usable. Open source contributor in Python, TypeScript and Rust.">
+  <meta name="author" content="Boyina Gowtham">
+  <meta name="theme-color" content="#faf9f6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1b1a18" media="(prefers-color-scheme: dark)">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Boyina Gowtham — AI engineer, technical writer">
+  <meta property="og:description" content="Builds agentic systems end to end, and writes the documentation that makes them usable.">
+  <meta property="og:site_name" content="Boyina Gowtham">
+  <meta property="og:image" content="assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Boyina Gowtham — a star above a pale sea, and its reflection.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Boyina Gowtham — AI engineer, technical writer">
+  <meta name="twitter:description" content="Builds agentic systems end to end, and writes the documentation that makes them usable.">
+  <meta name="twitter:image" content="assets/og.jpg">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/DepartureMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/Newsreader-Italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/styles.css">
+
+  <script>
+    // Set the theme before first paint so there is no flash of the wrong light.
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (e) {}
+      var night = saved ? saved === 'night'
+        : window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (night) document.documentElement.classList.add('theme-night');
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#about">Skip to content</a>
+
+  <canvas id="scene" aria-hidden="true"></canvas>
+  <div class="scene-grain" aria-hidden="true"></div>
+
+  <div class="site-frame">
+    <header class="site-header">
+      <a class="mark-link" href="#top" aria-label="Boyina Gowtham — back to top">
+        <svg viewBox="0 0 100 160" role="img" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M50 2Q56 48 98 80Q56 112 50 158Q44 112 2 80Q44 48 50 2Z"/>
+        </svg>
+      </a>
+
+      <div class="chrome-right">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to the night scene">
+          <span class="glyph" aria-hidden="true"></span>
+          <span class="label" id="theme-label">Night</span>
+        </button>
+
+      <nav class="top-nav" id="top-nav" aria-label="Primary">
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-panel">
+          <span class="bars" aria-hidden="true"><span></span><span></span></span>
+          <span class="menu-word">Menu</span>
+        </button>
+
+        <div class="menu-panel" id="menu-panel">
+          <div class="menu-group">
+            <p class="menu-label">On this page</p>
+            <a class="menu-link" href="#about">About <span class="index">01</span></a>
+            <a class="menu-link" href="#experience">Experience <span class="index">02</span></a>
+            <a class="menu-link" href="#work">Work <span class="index">03</span></a>
+            <a class="menu-link" href="#open-source">Open source <span class="index">04</span></a>
+            <a class="menu-link" href="#writing">Writing <span class="index">05</span></a>
+            <a class="menu-link" href="#skills">Skills <span class="index">06</span></a>
+            <a class="menu-link" href="#certifications">Certifications <span class="index">07</span></a>
+            <a class="menu-link" href="#contact">Contact <span class="index">08</span></a>
+          </div>
+          <div class="menu-group">
+            <p class="menu-label">Elsewhere</p>
+            <a class="menu-link" href="https://github.com/moah0911" target="_blank" rel="noopener noreferrer">GitHub <span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="menu-link" href="https://www.linkedin.com/in/boyinagowtham/" target="_blank" rel="noopener noreferrer">LinkedIn <span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="menu-link" href="https://thegowtham.medium.com/" target="_blank" rel="noopener noreferrer">Medium <span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="menu-link" href="mailto:gowtham.boyina2005@gmail.com">Email</a>
+          </div>
+        </div>
+      </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-label="Introduction">
+        <p class="hero-line">
+          Gowtham builds agents with
+          <a class="hero-link" href="https://github.com/moah0911/kettle" target="_blank" rel="noopener noreferrer">Kettle</a>
+          and
+          <a class="hero-link" href="https://github.com/moah0911/Rack" target="_blank" rel="noopener noreferrer">Rack</a>,
+          and writes the documentation developers actually read.
+          Built in the
+          <a class="hero-link" href="https://github.com/moah0911" target="_blank" rel="noopener noreferrer">open</a>,
+          from Visakhapatnam.
+        </p>
+
+        <p class="hero-foot"><span class="thread" aria-hidden="true"></span> scroll to read</p>
+      </section>
+
+      <div class="page">
+        <div class="column">
+
+          <!-- 01 — About -------------------------------------------------- -->
+          <section class="section" id="about">
+            <div class="section-head">
+              <p class="eyebrow"><span class="num">01</span> About</p>
+              <p class="head-note">Visakhapatnam, India</p>
+            </div>
+
+            <p class="prose lead">
+              AI engineer and technical writer. I build agentic systems end to end —
+              orchestration, retrieval, evaluation — and then write the documentation
+              that makes them usable by someone who did not build them.
+            </p>
+
+            <div class="prose" style="margin-top: 1.1em;">
+              <p>
+                Most of my work sits where a model meets a real workflow: a PR that has
+                to be reviewed by a different vendor's model before it merges, a clinical
+                PDF that has to resolve to the right ICD-10 code with a confidence score,
+                a browser agent that has to redact a face before any context leaves the
+                machine. The interesting part is rarely the model call. It is the queue,
+                the retry semantics, the schema and the failure message.
+              </p>
+              <p>
+                I write about the same things for developers — weekly deep-dives on agent
+                architectures and developer tooling on Medium, long-form guides on AI
+                economics at Juteq — and I submit the bugs I find upstream rather than
+                filing them in a notebook.
+              </p>
+            </div>
+
+            <dl class="facts">
+              <div class="fact">
+                <dt>Studying</dt>
+                <dd>B.Tech Computer Science, MVGR College of Engineering<br>2023–2027 · CGPA 8.05 / 10</dd>
+              </div>
+              <div class="fact">
+                <dt>Open source</dt>
+                <dd>18 merged pull requests<br>Python, TypeScript and Rust</dd>
+              </div>
+              <div class="fact">
+                <dt>Writing</dt>
+                <dd>Medium, featured in Towards AI and Level Up Coding</dd>
+              </div>
+              <div class="fact">
+                <dt>Recognition</dt>
+                <dd>Smart India Hackathon finalist 2024<br>Hack-IITK finalist 2025 · GSSoC 2025</dd>
+              </div>
+            </dl>
+          </section>
+
+          <!-- 02 — Experience --------------------------------------------- -->
+          <section class="section" id="experience">
+            <div class="section-head">
+              <p class="eyebrow"><span class="num">02</span> Experience</p>
+              <p class="head-note">2024 — 2026</p>
+            </div>
+
+            <div class="timeline">
+              <article class="entry">
+                <p class="entry-when">Mar – Aug<br>2026</p>
+                <div>
+                  <h3 class="entry-role">Technical Content Writer (Intern)</h3>
+                  <p class="entry-org"><a href="https://juteq.com" target="_blank" rel="noopener noreferrer">Juteq</a></p>
+                  <p class="entry-body">
+                    Write highly technical content on AI, agents and AI economics, for two
+                    audiences that never share a page: developers who need the mechanism,
+                    and executives who need the cost.
+                  </p>
+                </div>
+              </article>
+
+              <article class="entry">
+                <p class="entry-when">May – Jul<br>2026</p>
+                <div>
+                  <h3 class="entry-role">Research Intern, Computer Science</h3>
+                  <p class="entry-org">NIT Warangal · Dr. Tene Ramakrishnudu</p>
+                  <p class="entry-body">
+                    A 60-day research internship on <em>Quantum Multi-Sentence Coherence
+                    Modeling using Entanglement-Based Semantic Representations</em> — using
+                    the structure of quantum states to represent how sentences in a
+                    paragraph hold together.
+                  </p>
+                </div>
+              </article>
+
+              <article class="entry">
+                <p class="entry-when">Sep – Nov<br>2025</p>
+                <div>
+                  <h3 class="entry-role">AI/ML Intern</h3>
+                  <p class="entry-org">Infosys Springboard</p>
+                  <p class="entry-body">
+                    Built BudgetWise end to end: a preprocessing pipeline with fuzzy merchant
+                    matching, an eleven-model benchmark across ARIMA, Prophet, XGBoost, LSTM
+                    and N-BEATS, and the analytics surface that served the forecasts.
+                  </p>
+                </div>
+              </article>
+
+              <article class="entry">
+                <p class="entry-when">Apr 2025 –<br>Jan 2026</p>
+                <div>
+                  <h3 class="entry-role">Campus Mantri — Community Lead</h3>
+                  <p class="entry-org">GeeksforGeeks, MVGR College of Engineering</p>
+                  <ul class="entry-points">
+                    <li>Built and led a 200-member campus community.</li>
+                    <li>Ran career-guidance and hands-on coding sessions for 150+ students.</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="entry">
+                <p class="entry-when">Aug 2025 –<br>Present</p>
+                <div>
+                  <h3 class="entry-role">Technical Blog Writer</h3>
+                  <p class="entry-org"><a href="https://thegowtham.medium.com/" target="_blank" rel="noopener noreferrer">Medium</a></p>
+                  <p class="entry-body">
+                    Deep-dives on LLM architectures, agent frameworks and open-source
+                    developer tools, written for people who are going to implement them.
+                    Featured in Towards AI and Level Up Coding.
+                  </p>
+                </div>
+              </article>
+
+              <article class="entry">
+                <p class="entry-when">2025 –<br>Present</p>
+                <div>
+                  <h3 class="entry-role">Active Conducting Member</h3>
+                  <p class="entry-org"><a href="https://crossstack.in" target="_blank" rel="noopener noreferrer">CrossStack</a></p>
+                  <p class="entry-body">
+                    Organise developer meetups, buildathons and workshops across campus and
+                    the city — speakers, logistics and the content in between.
+                  </p>
+                </div>
+              </article>
+
+              <article class="entry">
+                <p class="entry-when">Apr 2024 –<br>Present</p>
+                <div>
+                  <h3 class="entry-role">Volunteer</h3>
+                  <p class="entry-org">Swecha Andhra Pradesh</p>
+                  <p class="entry-body">
+                    Workshops on open-source tools, Linux and developer fundamentals, with a
+                    steady interest in Telugu-language technology.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- 03 — Work --------------------------------------------------- -->
+          <section class="section" id="work">
+            <div class="section-head">
+              <p class="eyebrow"><span class="num">03</span> Work</p>
+              <p class="head-note">Six of them</p>
+            </div>
+
+            <div class="work-grid">
+              <article class="work-item">
+                <h3 class="work-name">Kettle <span class="badge">agents</span></h3>
+                <p class="work-desc">
+                  A self-hosted agent team that turns a request into a reviewed pull
+                  request: triage, spec, implement, then a review by a <em>different
+                  vendor's</em> model, capped at two revision cycles. The factory itself is
+                  configuration, and the orchestration is durable.
+                </p>
+                <p class="work-stack">Python · FastAPI · Temporal · Postgres · Kubernetes · LiteLLM · MCP</p>
+                <div class="work-links">
+                  <a class="link-quiet" href="https://github.com/moah0911/kettle" target="_blank" rel="noopener noreferrer">Code <span class="up" aria-hidden="true">↗</span></a>
+                </div>
+              </article>
+
+              <article class="work-item">
+                <h3 class="work-name">Rack <span class="badge">health</span></h3>
+                <p class="work-desc">
+                  A CLI that reads clinical PDFs, images and plain text, then links
+                  diagnoses to ICD-10, medications to RxNorm and procedures to SNOMED CT —
+                  every mapping carrying a confidence score, every lookup falling back to
+                  Bedrock when the terminology services miss.
+                </p>
+                <p class="work-stack">Python · Strands Agents · Amazon Bedrock · NLM Clinical Tables</p>
+                <div class="work-links">
+                  <a class="link-quiet" href="https://github.com/moah0911/Rack" target="_blank" rel="noopener noreferrer">Code <span class="up" aria-hidden="true">↗</span></a>
+                </div>
+              </article>
+
+              <article class="work-item">
+                <h3 class="work-name">Sick <span class="badge">agent</span></h3>
+                <p class="work-desc">
+                  An object-oriented coding agent that reads, writes and edits code — and
+                  patches its own source to get better at it. Attach files with
+                  <code>@file</code>, drop to a shell with <code>!cmd</code>, and let it
+                  keep experience memory between runs.
+                </p>
+                <p class="work-stack">Python · NVIDIA OO-Agents · TUI · sandboxed bash</p>
+                <div class="work-links">
+                  <a class="link-quiet" href="https://github.com/moah0911/sick" target="_blank" rel="noopener noreferrer">Code <span class="up" aria-hidden="true">↗</span></a>
+                </div>
+              </article>
+
+              <article class="work-item">
+                <h3 class="work-name">Vision <span class="badge">privacy</span></h3>
+                <p class="work-desc">
+                  An on-device vision transformer reads the screen and redacts faces,
+                  passwords, email addresses, card numbers and Indian identity numbers
+                  before any context leaves the machine. The server only ever answers with
+                  click, fill, scroll or say.
+                </p>
+                <p class="work-stack">TypeScript · WebGPU · Transformers.js · FastAPI</p>
+                <div class="work-links">
+                  <a class="link-quiet" href="https://github.com/moah0911/Vision" target="_blank" rel="noopener noreferrer">Code <span class="up" aria-hidden="true">↗</span></a>
+                </div>
+              </article>
+
+              <article class="work-item">
+                <h3 class="work-name">BudgetWise <span class="badge">research</span></h3>
+                <p class="work-desc">
+                  Expense forecasting with the benchmark done properly: eleven models
+                  across four families, 30,000+ records, five metrics. XGBoost won at 14.5%
+                  MAPE with sub-second inference; the dashboard adds confidence intervals
+                  and anomaly flags.
+                </p>
+                <p class="work-stack">Python · XGBoost · LSTM · N-BEATS · Streamlit</p>
+                <div class="work-links">
+                  <a class="link-quiet" href="https://github.com/moah0911/BudgetWise-AI-based-Expense-Forecasting-Tool" target="_blank" rel="noopener noreferrer">Code <span class="up" aria-hidden="true">↗</span></a>
+                </div>
+              </article>
+
+              <article class="work-item">
+                <h3 class="work-name">Ignisengine <span class="badge">agents</span></h3>
+                <p class="work-desc">
+                  Six specialised agents — security, product, dev, QA, prioritisation,
+                  synthesis — turn one sentence into a complete PRD, streamed over SSE with
+                  Markdown and PDF export.
+                </p>
+                <p class="work-stack">Python · Gemini 2.0 Flash · Flask · Supabase</p>
+                <div class="work-links">
+                  <a class="link-quiet" href="https://github.com/moah0911/Ignisengine" target="_blank" rel="noopener noreferrer">Code <span class="up" aria-hidden="true">↗</span></a>
+                </div>
+              </article>
+            </div>
+
+            <p class="os-note">
+              Also —
+              <a href="https://github.com/moah0911/contextify" target="_blank" rel="noopener noreferrer">Contextify</a>, a scraper that turns a shared AI chat into a structured context file;
+              <a href="https://github.com/moah0911/Demon" target="_blank" rel="noopener noreferrer">Demon</a>, a Rust interpreter with a garbage collector;
+              <a href="https://github.com/moah0911/algozen" target="_blank" rel="noopener noreferrer">AlgoZen</a>, 55 modules on PyPI;
+              <a href="https://github.com/moah0911/curdos" target="_blank" rel="noopener noreferrer">CURD</a>, a client-side PDF workbench with 20+ tools.
+            </p>
+          </section>
+
+          <!-- 04 — Open source -------------------------------------------- -->
+          <section class="section" id="open-source">
+            <div class="section-head">
+              <p class="eyebrow"><span class="num">04</span> Open source</p>
+              <p class="head-note">Reproduce, fix, test</p>
+            </div>
+
+            <p class="prose" style="margin-bottom: 26px;">
+              Every one of these is a reproduced bug with a root cause, a fix and a test,
+              merged by that project's maintainers.
+            </p>
+
+            <div class="os-stats">
+              <p class="os-stat"><b>18</b> merged</p>
+              <p class="os-stat"><b>18</b> open</p>
+              <p class="os-stat"><b>383</b> commits</p>
+            </div>
+
+            <div class="os-list">
+              <article class="os-row">
+                <h3 class="os-repo"><span><span class="owner">openai/</span>codex-security</span> <span class="lang">TypeScript · Oct 2026</span></h3>
+                <p class="os-what">
+                  Codex Security silently dropped <code>.cgi</code>, <code>.pl</code>,
+                  <code>.pm</code> and <code>.t</code> files from its diff inventory
+                  through a fixed extension allowlist. I verified the shipped fix, then
+                  added the missing test coverage.
+                </p>
+                <div class="os-links">
+                  <a class="link-quiet" href="https://github.com/openai/codex-security/pull/2109" target="_blank" rel="noopener noreferrer">PR #2109 <span class="up" aria-hidden="true">↗</span></a>
+                </div>
+              </article>
+
+              <article class="os-row">
+                <h3 class="os-repo"><span><span class="owner">awslabs/</span>cli-agent-orchestrator</span> <span class="lang">Python · Oct 2026</span></h3>
+                <p class="os-what">
+                  Terminal ids are eight hex characters, and after a terminal was deleted
+                  its id stayed resolvable for fourteen days through the idempotency table —
+                  so a retry could resolve to a stale terminal. Fix plus a new test file.
+                </p>
+                <div class="os-links">
+                  <a class="link-quiet" href="https://github.com/awslabs/cli-agent-orchestrator/pull/1129" target="_blank" rel="noopener noreferrer">PR #1129 <span class="up" aria-hidden="true">↗</span></a>
+                </div>
+              </article>
+
+              <article class="os-row">
+                <h3 class="os-repo"><span><span class="owner">IBM/</span>smith</span> <span class="lang">Python · Oct 2026</span></h3>
+                <p class="os-what">
+                  The duplication detector crashed on deny-by-default policies, because the
+                  AST graph dropped rule-body terms containing a call. Fix plus new
+                  integration and unit tests.
+                </p>
+                <div class="os-links">
+                  <a class="link-quiet" href="https://github.com/IBM/smith/pull/122" target="_blank" rel="noopener noreferrer">PR #122 <span class="up" aria-hidden="true">↗</span></a>
+                </div>
+              </article>
+
+              <article class="os-row">
+                <h3 class="os-repo"><span><span class="owner">browseros-ai/</span>BrowserOS</span> <span class="lang">Rust · Nov 2026</span></h3>
+                <p class="os-what">
+                  OpenCode 2.x only reads servers from <code>mcp.servers.*</code>, so the
+                  provisioned entry was silently ignored entirely. Fixed the read and the
+                  write path, and kept a UTF-8 BOM intact through edits.
+                </p>
+                <div class="os-links">
+                  <a class="link-quiet" href="https://github.com/browseros-ai/BrowserOS/pull/3003" target="_blank" rel="noopener noreferrer">PR #3003 <span class="up" aria-hidden="true">↗</span></a>
+                </div>
+              </article>
+
+              <article class="os-row">
+                <h3 class="os-repo"><span><span class="owner">run-llama/</span>liteparse</span> <span class="lang">Rust · Oct 2026</span></h3>
+                <p class="os-what">
+                  Two PDF-parsing bugs fixed against public reproduction files: dash-bullet
+                  lists merging into the paragraph above them, and two-level table headers
+                  mis-pairing their columns.
+                </p>
+                <div class="os-links">
+                  <a class="link-quiet" href="https://github.com/run-llama/liteparse/pull/490" target="_blank" rel="noopener noreferrer">PR #490 <span class="up" aria-hidden="true">↗</span></a>
+                  <a class="link-quiet" href="https://github.com/run-llama/liteparse/pull/491" target="_blank" rel="noopener noreferrer">PR #491 <span class="up" aria-hidden="true">↗</span></a>
+                </div>
+              </article>
+            </div>
+
+            <p class="os-note">
+              Also merged: <a href="https://github.com/langchain-ai/smithtune/pull/100" target="_blank" rel="noopener noreferrer">langchain-ai/smithtune #100</a>.
+              Earlier, during GirlScript Summer of Code 2025, four PRs in manasvi-0/AlgoLab and one in CharithaReddy18/AI-health-chatbot.
+            </p>
+          </section>
+
+          <!-- 05 — Writing ------------------------------------------------ -->
+          <section class="section" id="writing">
+            <div class="section-head">
+              <p class="eyebrow"><span class="num">05</span> Writing</p>
+              <p class="head-note">Weekly, mostly</p>
+            </div>
+
+            <div class="writing-grid">
+              <a class="write-card" href="https://thegowtham.medium.com/" target="_blank" rel="noopener noreferrer">
+                <p class="write-source">Medium · 343 followers</p>
+                <p class="write-title">Deep-dives on LLM architectures and agent frameworks</p>
+                <p class="write-desc">
+                  Practical implementation rather than overviews: stateful agents, LLM
+                  councils, the software lifecycle for AI systems. Featured in Towards AI
+                  and Level Up Coding.
+                </p>
+                <span class="link-quiet">Read <span class="up" aria-hidden="true">↗</span></span>
+              </a>
+
+              <a class="write-card" href="https://juteq.com" target="_blank" rel="noopener noreferrer">
+                <p class="write-source">Juteq · 2026</p>
+                <p class="write-title">Technical guides on AI, agents and AI economics</p>
+                <p class="write-desc">
+                  Long-form work for two audiences at once — the engineering mechanism for
+                  developers, the cost and risk framing for the people signing off on it.
+                </p>
+                <span class="link-quiet">Visit <span class="up" aria-hidden="true">↗</span></span>
+              </a>
+            </div>
+          </section>
+
+          <!-- 06 — Skills ------------------------------------------------- -->
+          <section class="section" id="skills">
+            <div class="section-head">
+              <p class="eyebrow"><span class="num">06</span> Skills</p>
+              <p class="head-note">What I reach for</p>
+            </div>
+
+            <div class="skill-groups">
+              <div class="skill-group">
+                <h3>Languages</h3>
+                <div class="chips">
+                  <span class="chip">Python</span>
+                  <span class="chip">TypeScript</span>
+                  <span class="chip">Rust</span>
+                  <span class="chip">Java</span>
+                  <span class="chip">C++</span>
+                  <span class="chip">SQL</span>
+                </div>
+              </div>
+
+              <div class="skill-group">
+                <h3>Agents &amp; models</h3>
+                <div class="chips">
+                  <span class="chip">LangGraph</span>
+                  <span class="chip">Langflow</span>
+                  <span class="chip">CrewAI</span>
+                  <span class="chip">MCP</span>
+                  <span class="chip">Gemini API</span>
+                  <span class="chip">OpenAI API</span>
+                  <span class="chip">Amazon Bedrock</span>
+                  <span class="chip">Hugging Face</span>
+                  <span class="chip">RAG</span>
+                  <span class="chip">embeddings</span>
+                  <span class="chip">structured outputs</span>
+                  <span class="chip">prompt engineering</span>
+                </div>
+              </div>
+
+              <div class="skill-group">
+                <h3>Backend &amp; infrastructure</h3>
+                <div class="chips">
+                  <span class="chip">FastAPI</span>
+                  <span class="chip">Flask</span>
+                  <span class="chip">Temporal</span>
+                  <span class="chip">Postgres</span>
+                  <span class="chip">Supabase</span>
+                  <span class="chip">Docker</span>
+                  <span class="chip">Kubernetes</span>
+                  <span class="chip">AWS</span>
+                  <span class="chip">Vercel</span>
+                  <span class="chip">Render</span>
+                  <span class="chip">Streamlit</span>
+                </div>
+              </div>
+
+              <div class="skill-group">
+                <h3>Web &amp; scraping</h3>
+                <div class="chips">
+                  <span class="chip">Selenium</span>
+                  <span class="chip">undetected-chromedriver</span>
+                  <span class="chip">JavaScript-heavy pages</span>
+                  <span class="chip">login flows</span>
+                  <span class="chip">WebGPU</span>
+                </div>
+              </div>
+
+              <div class="skill-group">
+                <h3>Writing &amp; community</h3>
+                <div class="chips">
+                  <span class="chip">API documentation</span>
+                  <span class="chip">developer onboarding</span>
+                  <span class="chip">technical writing</span>
+                  <span class="chip">feedback synthesis</span>
+                  <span class="chip">meetups &amp; workshops</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 07 — Certifications ----------------------------------------- -->
+          <section class="section" id="certifications">
+            <div class="section-head">
+              <p class="eyebrow"><span class="num">07</span> Certifications</p>
+              <p class="head-note">25 courses</p>
+            </div>
+
+            <div class="cert-groups">
+              <details class="cert-group" open>
+                <summary>Amazon Web Services <span class="count">8 · 2026</span><span class="sign" aria-hidden="true"></span></summary>
+                <ul class="cert-list">
+                  <li>Artificial Intelligence Practitioner Learning Plan</li>
+                  <li>Developing Generative Artificial Intelligence Solutions</li>
+                  <li>Developing Machine Learning Solutions</li>
+                  <li>Fundamentals of Machine Learning and Artificial Intelligence</li>
+                  <li>Optimizing Foundation Models</li>
+                  <li>Responsible Artificial Intelligence Practices</li>
+                  <li>Exploring Artificial Intelligence Use Cases and Applications</li>
+                  <li>Security, Compliance, and Governance for AI Solutions</li>
+                </ul>
+              </details>
+
+              <details class="cert-group">
+                <summary>Cisco Networking Academy <span class="count">5 · 2024–2026</span><span class="sign" aria-hidden="true"></span></summary>
+                <ul class="cert-list">
+                  <li>CCNA 1 — Introduction to Networks (Dec 2025)</li>
+                  <li>CCNA 2 — Switching, Routing and Wireless Essentials (May 2026)</li>
+                  <li>CCNA 3 — Enterprise Networking, Security and Automation (May 2026)</li>
+                  <li>Python Essentials 1 (Dec 2024)</li>
+                  <li>Python Essentials 2 (Mar 2025)</li>
+                </ul>
+              </details>
+
+              <details class="cert-group">
+                <summary>NPTEL <span class="count">5 · 2025–2026</span><span class="sign" aria-hidden="true"></span></summary>
+                <ul class="cert-list">
+                  <li>Deep Learning — 70%</li>
+                  <li>Natural Language Processing — 60%</li>
+                  <li>Strategic Management — 64%</li>
+                  <li>Cryptography and Network Security — 62%</li>
+                  <li>Software Engineering — 47%</li>
+                </ul>
+              </details>
+
+              <details class="cert-group">
+                <summary>MVGR College of Engineering <span class="count">3 · 2026</span><span class="sign" aria-hidden="true"></span></summary>
+                <ul class="cert-list">
+                  <li>Introduction to Data Science</li>
+                  <li>Introduction to Modern AI</li>
+                  <li>Apply AI — Analyze Customer Reviews</li>
+                </ul>
+              </details>
+
+              <details class="cert-group">
+                <summary>Anthropic, NVIDIA and IBM <span class="count">4 · 2025</span><span class="sign" aria-hidden="true"></span></summary>
+                <ul class="cert-list">
+                  <li>Claude Code in Action — Anthropic, via Skilljar (Jul 2025)</li>
+                  <li>Building LLM Applications with Prompt Engineering — NVIDIA (May 2025)</li>
+                  <li>Python for Data Science, AI and Development — IBM, via Coursera (Feb 2025)</li>
+                  <li>Enterprise Design Thinking Practitioner — IBM SkillsBuild (Oct 2025)</li>
+                </ul>
+              </details>
+            </div>
+          </section>
+
+          <!-- 08 — Contact ------------------------------------------------ -->
+          <section class="section contact" id="contact">
+            <p class="eyebrow"><span class="num">08</span> Contact</p>
+            <p class="contact-line">Hiring, or something<br>worth building?</p>
+            <p>
+              <a class="contact-mail" href="mailto:gowtham.boyina2005@gmail.com">gowtham.boyina2005@gmail.com</a>
+            </p>
+            <div class="contact-links">
+              <a href="https://github.com/moah0911" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://www.linkedin.com/in/boyinagowtham/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="https://thegowtham.medium.com/" target="_blank" rel="noopener noreferrer">Medium</a>
+            </div>
+          </section>
+
+          <footer class="colophon">
+            <p>Boyina Gowtham · Visakhapatnam, India</p>
+            <p>Hand-written HTML, no trackers. <span class="updated">November 2026</span></p>
+          </footer>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <p class="footer-name">
+        Boyina Gowtham<span class="dot" aria-hidden="true">·</span><span class="place">Visakhapatnam</span>
+      </p>
+      <p class="footer-year">2026</p>
+    </footer>
+  </div>
+
+  <noscript>
+    <style>
+      .menu-panel { position: static; opacity: 1; visibility: visible; transform: none; }
+      .menu-toggle { display: none; }
+      .theme-toggle { display: none; }
+    </style>
+  </noscript>
+
+  <script src="assets/scene.js" defer></script>
+  <script src="assets/app.js" defer></script>
+</body>
+</html>
