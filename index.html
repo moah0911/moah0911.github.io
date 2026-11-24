@@ -49,8 +49,8 @@
   <div class="site-frame">
     <header class="site-header">
       <a class="mark-link" href="#top" aria-label="Boyina Gowtham — back to top">
-        <svg viewBox="0 0 100 160" role="img" aria-hidden="true" focusable="false">
-          <path fill="currentColor" d="M50 2Q56 48 98 80Q56 112 50 158Q44 112 2 80Q44 48 50 2Z"/>
+        <svg viewBox="0 0 96 96" role="img" aria-hidden="true" focusable="false">
+          <path d="M67.28 25.02A30 30 0 1 0 78 48M48 48H78" fill="none" stroke="currentColor" stroke-width="9"/>
         </svg>
       </a>
 
@@ -93,13 +93,8 @@
     <main id="top">
       <section class="hero" aria-label="Introduction">
         <p class="hero-line">
-          Gowtham builds agents with
-          <a class="hero-link" href="https://github.com/moah0911/kettle" target="_blank" rel="noopener noreferrer">Kettle</a>
-          and
-          <a class="hero-link" href="https://github.com/moah0911/Rack" target="_blank" rel="noopener noreferrer">Rack</a>,
-          and writes the documentation developers actually read.
-          Built in the
-          <a class="hero-link" href="https://github.com/moah0911" target="_blank" rel="noopener noreferrer">open</a>,
+          Agents that ship. <a class="hero-link" href="https://thegowtham.medium.com/" target="_blank" rel="noopener noreferrer">Docs</a> that read.
+          All of it in the <a class="hero-link" href="https://github.com/moah0911" target="_blank" rel="noopener noreferrer">open</a>,
           from Visakhapatnam.
         </p>
 
@@ -117,7 +112,7 @@
             </div>
 
             <p class="prose lead">
-              AI engineer and technical writer. I build agentic systems end to end —
+              I'm Boyina Gowtham — AI engineer and technical writer. I build agentic systems end to end —
               orchestration, retrieval, evaluation — and then write the documentation
               that makes them usable by someone who did not build them.
             </p>
@@ -265,51 +260,54 @@
               <p class="head-note">Six of them</p>
             </div>
 
-            <div class="work-grid">
+            <div class="work-list">
               <article class="work-item">
-                <h3 class="work-name">Kettle <span class="badge">agents</span></h3>
-                <p class="work-desc">
-                  A self-hosted agent team that turns a request into a reviewed pull
-                  request: triage, spec, implement, then a review by a <em>different
-                  vendor's</em> model, capped at two revision cycles. The factory itself is
-                  configuration, and the orchestration is durable.
-                </p>
-                <p class="work-stack">Python · FastAPI · Temporal · Postgres · Kubernetes · LiteLLM · MCP</p>
-                <div class="work-links">
+                <div class="work-head">
+                  <h3 class="work-name">Kettle</h3>
                   <a class="link-quiet" href="https://github.com/moah0911/kettle" target="_blank" rel="noopener noreferrer">Code <span class="up" aria-hidden="true">↗</span></a>
                 </div>
+                <p class="work-desc">
+                  A self-hosted agent team that turns a request into a reviewed pull request —
+                  triage, spec, implement, then a review by a <em>different vendor's</em> model,
+                  capped at two revision cycles. The factory is configuration; the
+                  orchestration is durable.
+                </p>
+                <p class="work-stack">Python · FastAPI · Temporal · Postgres · Kubernetes · LiteLLM · MCP</p>
               </article>
 
               <article class="work-item">
-                <h3 class="work-name">Rack <span class="badge">health</span></h3>
-                <p class="work-desc">
-                  A CLI that reads clinical PDFs, images and plain text, then links
-                  diagnoses to ICD-10, medications to RxNorm and procedures to SNOMED CT —
-                  every mapping carrying a confidence score, every lookup falling back to
-                  Bedrock when the terminology services miss.
-                </p>
-                <p class="work-stack">Python · Strands Agents · Amazon Bedrock · NLM Clinical Tables</p>
-                <div class="work-links">
+                <div class="work-head">
+                  <h3 class="work-name">Rack</h3>
                   <a class="link-quiet" href="https://github.com/moah0911/Rack" target="_blank" rel="noopener noreferrer">Code <span class="up" aria-hidden="true">↗</span></a>
                 </div>
+                <p class="work-desc">
+                  A CLI that reads clinical PDFs, images and plain text, then links diagnoses
+                  to ICD-10, medications to RxNorm and procedures to SNOMED CT — every mapping
+                  carrying a confidence score, with a Bedrock fallback when the terminology
+                  services miss.
+                </p>
+                <p class="work-stack">Python · Strands Agents · Amazon Bedrock · NLM Clinical Tables</p>
               </article>
 
               <article class="work-item">
-                <h3 class="work-name">Sick <span class="badge">agent</span></h3>
+                <div class="work-head">
+                  <h3 class="work-name">Sick</h3>
+                  <a class="link-quiet" href="https://github.com/moah0911/sick" target="_blank" rel="noopener noreferrer">Code <span class="up" aria-hidden="true">↗</span></a>
+                </div>
                 <p class="work-desc">
                   An object-oriented coding agent that reads, writes and edits code — and
                   patches its own source to get better at it. Attach files with
-                  <code>@file</code>, drop to a shell with <code>!cmd</code>, and let it
-                  keep experience memory between runs.
+                  <code>@file</code>, drop to a shell with <code>!cmd</code>, and let it keep
+                  experience memory between runs.
                 </p>
                 <p class="work-stack">Python · NVIDIA OO-Agents · TUI · sandboxed bash</p>
-                <div class="work-links">
-                  <a class="link-quiet" href="https://github.com/moah0911/sick" target="_blank" rel="noopener noreferrer">Code <span class="up" aria-hidden="true">↗</span></a>
-                </div>
               </article>
 
               <article class="work-item">
-                <h3 class="work-name">Vision <span class="badge">privacy</span></h3>
+                <div class="work-head">
+                  <h3 class="work-name">Vision</h3>
+                  <a class="link-quiet" href="https://github.com/moah0911/Vision" target="_blank" rel="noopener noreferrer">Code <span class="up" aria-hidden="true">↗</span></a>
+                </div>
                 <p class="work-desc">
                   An on-device vision transformer reads the screen and redacts faces,
                   passwords, email addresses, card numbers and Indian identity numbers
@@ -317,36 +315,33 @@
                   click, fill, scroll or say.
                 </p>
                 <p class="work-stack">TypeScript · WebGPU · Transformers.js · FastAPI</p>
-                <div class="work-links">
-                  <a class="link-quiet" href="https://github.com/moah0911/Vision" target="_blank" rel="noopener noreferrer">Code <span class="up" aria-hidden="true">↗</span></a>
-                </div>
               </article>
 
               <article class="work-item">
-                <h3 class="work-name">BudgetWise <span class="badge">research</span></h3>
-                <p class="work-desc">
-                  Expense forecasting with the benchmark done properly: eleven models
-                  across four families, 30,000+ records, five metrics. XGBoost won at 14.5%
-                  MAPE with sub-second inference; the dashboard adds confidence intervals
-                  and anomaly flags.
-                </p>
-                <p class="work-stack">Python · XGBoost · LSTM · N-BEATS · Streamlit</p>
-                <div class="work-links">
+                <div class="work-head">
+                  <h3 class="work-name">BudgetWise</h3>
                   <a class="link-quiet" href="https://github.com/moah0911/BudgetWise-AI-based-Expense-Forecasting-Tool" target="_blank" rel="noopener noreferrer">Code <span class="up" aria-hidden="true">↗</span></a>
                 </div>
+                <p class="work-desc">
+                  Expense forecasting with the benchmark done properly: eleven models across
+                  four families, 30,000+ records, five metrics. XGBoost won at 14.5% MAPE with
+                  sub-second inference; the dashboard adds confidence intervals and anomaly
+                  flags.
+                </p>
+                <p class="work-stack">Python · XGBoost · LSTM · N-BEATS · Streamlit</p>
               </article>
 
               <article class="work-item">
-                <h3 class="work-name">Ignisengine <span class="badge">agents</span></h3>
+                <div class="work-head">
+                  <h3 class="work-name">Ignisengine</h3>
+                  <a class="link-quiet" href="https://github.com/moah0911/Ignisengine" target="_blank" rel="noopener noreferrer">Code <span class="up" aria-hidden="true">↗</span></a>
+                </div>
                 <p class="work-desc">
                   Six specialised agents — security, product, dev, QA, prioritisation,
                   synthesis — turn one sentence into a complete PRD, streamed over SSE with
                   Markdown and PDF export.
                 </p>
                 <p class="work-stack">Python · Gemini 2.0 Flash · Flask · Supabase</p>
-                <div class="work-links">
-                  <a class="link-quiet" href="https://github.com/moah0911/Ignisengine" target="_blank" rel="noopener noreferrer">Code <span class="up" aria-hidden="true">↗</span></a>
-                </div>
               </article>
             </div>
 

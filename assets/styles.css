@@ -317,14 +317,14 @@ body.is-content .site-header::before {
 }
 
 .mark-link svg {
-  width: 56px;
-  height: 90px;
+  width: 46px;
+  height: 46px;
   transition: width 420ms var(--out-ease), height 420ms var(--out-ease);
 }
 
 body.is-content .mark-link svg {
-  width: 20px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
 }
 
 /* --- Menu ----------------------------------------------------------------- */
@@ -838,74 +838,47 @@ code {
 
 /* --- Work (projects) ------------------------------------------------------ */
 
-.work-grid {
-  display: grid;
-  gap: 1px;
-  background: var(--rule);
+/* Open rows on hairlines rather than boxed cards: the eye gets a place to
+   rest between one project and the next. */
+.work-list {
   border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
 }
 
 .work-item {
-  position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: start;
-  gap: 6px 24px;
-  padding: 22px 20px 22px 0;
-  background: color-mix(in srgb, var(--paper) 92%, transparent);
-  transition: background-color 240ms ease;
+  padding: 34px 0 36px;
+  border-bottom: 1px solid var(--rule);
 }
 
-.work-item:hover {
-  background: var(--hover-surface);
+.work-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
 }
 
 .work-name {
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
   font-family: var(--serif);
-  font-size: 1.3125rem;
-  line-height: 1.25;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
   color: var(--ink);
 }
 
-.work-name .badge {
-  padding: 2px 6px;
-  border: 1px solid var(--rule);
-  font-family: var(--mono);
-  font-size: 0.625rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--ink-faint);
-}
-
 .work-desc {
-  grid-column: 1;
-  max-width: 58ch;
+  margin-top: 12px;
+  max-width: 62ch;
   font-family: var(--serif);
-  font-size: 1rem;
-  line-height: 1.55;
+  font-size: 0.9375rem;
+  line-height: 1.62;
   color: var(--ink-soft);
 }
 
 .work-stack {
-  grid-column: 1;
-  margin-top: 2px;
+  margin-top: 12px;
   font-size: var(--text-xs);
-  letter-spacing: 0.04em;
-  color: var(--ink-ghost);
-}
-
-.work-links {
-  grid-column: 2;
-  grid-row: 1 / span 3;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 6px;
-  padding-top: 2px;
+  letter-spacing: 0.05em;
+  color: var(--ink-faint);
 }
 
 .link-quiet {
@@ -1399,13 +1372,13 @@ body.menu-open {
   }
 
   .mark-link svg {
-    width: 40px;
-    height: 64px;
+    width: 38px;
+    height: 38px;
   }
 
   body.is-content .mark-link svg {
-    width: 17px;
-    height: 27px;
+    width: 22px;
+    height: 22px;
   }
 
   .hero-foot {
@@ -1428,17 +1401,16 @@ body.menu-open {
   }
 
   .work-item {
-    grid-template-columns: minmax(0, 1fr);
-    padding-right: 0;
+    padding: 26px 0 28px;
   }
 
-  .work-links {
-    grid-column: 1;
-    grid-row: auto;
-    flex-direction: row;
-    align-items: baseline;
-    gap: 18px;
-    padding-top: 8px;
+  .work-head {
+    flex-wrap: wrap;
+    gap: 8px 24px;
+  }
+
+  .work-name {
+    font-size: 1.3125rem;
   }
 
   .site-footer {

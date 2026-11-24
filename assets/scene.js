@@ -1,13 +1,12 @@
 /* Rendered horizon.
  *
- * One full-screen pass: a graded sky, a sea that holds a single reflected
- * star, and film grain over both. Luminance is computed first and mapped to a
- * warm day palette or a cold night palette at the end, so the whole scene
- * changes light without changing geometry.
+ * One full-screen pass: a graded sky, a sea, and film grain over both.
+ * Luminance is computed first and mapped to a warm day palette or a cold
+ * night palette at the end, so the whole scene changes light without
+ * changing geometry.
  *
- * The reflected star is deliberately not a physical mirror of the header mark:
- * like a printed colophon, it is the same shape placed where the composition
- * needs it. Waves break it into a glitter path.
+ * Out on the water sits a single lamp. The wave facets break its reflection
+ * into a glitter path rather than a clean mirror.
  */
 
 (function () {
@@ -52,16 +51,6 @@
     '  return mix(mix(a, b, u.x), mix(c, d, u.x), u.y);',
     '}',
     '',
-    '/* Four-point sparkle, unit radius. Negative inside. */',
-    'float sparkleField(vec2 q) {',
-    '  q.x *= 1.55;',
-    '  float a = atan(q.x, q.y);',
-    '  float r = length(q);',
-    '  float env = pow(abs(cos(2.0 * a)), 2.7);',
-    '  float arms = mix(0.60, 1.0, pow(abs(cos(a)), 3.0));',
-    '  return r - env * arms;',
-    '}',
-    '',
     'void main() {',
     '  vec2 uv = gl_FragCoord.xy / u_res;',
     '  float aspect = u_res.x / u_res.y;',
@@ -94,7 +83,7 @@
     '  float daySea   = mix(0.868, 0.572, pow(depth, 0.82)) + rip * 0.013 + streaks * 0.026;',
     '  float nightSea = mix(0.250, 0.068, pow(depth, 0.58)) + rip * 0.008 + streaks * 0.055;',
     '',
-    '  /* ---- the mark, reflected ------------------------------------------ */',
+    '  /* ---- the lamp, reflected ------------------------------------------- */',
     '  float starH = u_starPx * px;',
     '  float starY = h - starH * 1.05;',
     '',
@@ -118,11 +107,11 @@
     '  wob += sin(depth * 67.0 - u_time * 1.10) * 0.0034;',
     '  wob *= calm;',
     '',
-    '  vec2 q = vec2(p.x - wob + jitter, (uv.y - starY) / 1.50) / starH;',
-    '  float mark = 1.0 - smoothstep(-0.35, 0.35, sparkleField(q));',
-    '  mark *= mix(0.22, 1.0, sliver) * (0.72 + 0.28 * r2);',
+    '  vec2 q = vec2(p.x - wob + jitter, (uv.y - starY) / 1.35) / starH;',
+    '  float core = exp(-dot(q, q) * 2.4);',
+    '  float mark = core * mix(0.25, 1.0, sliver) * (0.70 + 0.30 * r2);',
     '',
-    '  /* A column of broken light under the mark, widening toward the shore. */',
+    '  /* A column of broken light under the lamp, widening toward the shore. */',
     '  float spread = starH * (0.78 + depth * 1.35);',
     '  float column = exp(-pow(abs(p.x - wob) / spread, 2.0));',
     '  float glints = smoothstep(0.50, 0.96,',

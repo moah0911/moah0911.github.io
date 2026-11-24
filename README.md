@@ -11,7 +11,7 @@ portfolio/
     ├── styles.css          design system: tokens, chrome, column, themes
     ├── app.js              theme, menu, scroll states, cert accordion
     ├── scene.js           the rendered horizon (WebGL fragment shader)
-    ├── mark.svg            the four-point sparkle
+    ├── mark.svg            the "G" monogram
     ├── favicon.svg
     ├── og.jpg              1200×630 share card
     ├── grain-light.png     paper fibre, day
@@ -55,12 +55,12 @@ headings, prose, the contact line. Both self-hosted, so the page renders
 identically offline and no request goes to a third party.
 
 **The scene.** `scene.js` runs one full-screen fragment shader. It builds a
-luminance field — a graded sky, a sea of thin glinting rows, a star reflected as
-a broken column of light — and maps it to a warm day palette or a cold night
-palette. The mark is ink on paper in daylight and the only light source at night.
-The horizon sits at 39.43% of the viewport height; JS publishes the exact pixel
-offset as `--scene-horizon-from-bottom` and the hero copy is anchored to it, so
-the text always clears the water no matter the viewport.
+luminance field — a graded sky, a sea of thin glinting rows, a lamp out on the
+water broken into a glitter path — and maps it to a warm day palette or a cold
+night palette. The lamp is ink on paper in daylight and the only light source
+at night. The horizon sits at 39.43% of the viewport height; JS publishes the
+exact pixel offset as `--scene-horizon-from-bottom` and the hero copy is
+anchored to it, so the text always clears the water no matter the viewport.
 
 **One sheet.** The paper column is a single continuous surface with feathered
 side edges. The header grows a matching paper plate as it arrives, and the grain
@@ -97,5 +97,5 @@ nothing to build. Publish the folder as-is.
 - **Newsreader** — Production Type for Google Fonts, SIL Open Font License 1.1.
 
 The design takes its cues from [earendil.com](https://earendil.com) — the paper
-surface, the mono interface against a serif voice, a fixed horizon. The mark, the
-scene, the layout and the code here are original.
+surface, the mono interface against a serif voice, a fixed horizon. The
+monogram, the lamp on the water, the layout and the code here are original.
