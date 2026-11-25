@@ -220,8 +220,8 @@ ol {
    together instead of showing a grey rectangle. */
 .no-scene body {
   background:
-    linear-gradient(to top, rgba(53, 52, 47, 0.14) 0%, rgba(53, 52, 47, 0.14) 39.43%, transparent 39.43%),
-    linear-gradient(to top, #d6d0c4 0%, #f2efe8 39.43%, #fbfaf7 100%);
+    linear-gradient(to top, rgba(18, 79, 104, 0.30) 0%, rgba(18, 79, 104, 0.30) 39.43%, transparent 39.43%),
+    linear-gradient(to top, #2f6f8f 0%, #b9d9e8 39.43%, #e8f3fa 78%, #f4f9fd 100%);
 }
 
 .theme-night.no-scene body {
@@ -239,7 +239,7 @@ ol {
   pointer-events: none;
   background-image: var(--paper-grain);
   background-size: 128px 128px;
-  opacity: 0.3;
+  opacity: 0.2;
   mix-blend-mode: overlay;
 }
 
@@ -482,43 +482,6 @@ body.is-content .mark-link svg {
   transition: color var(--theme-duration) var(--theme-ease);
 }
 
-/* Inline links in the hero carry a dotted rule and reveal a sparkle on hover. */
-.hero-link {
-  position: relative;
-  display: inline;
-  color: inherit;
-  text-decoration: underline;
-  text-decoration-style: dotted;
-  text-decoration-thickness: 0.03em;
-  text-underline-offset: 0.1em;
-  transition: color 200ms ease;
-}
-
-.hero-link:hover {
-  text-decoration-color: transparent;
-}
-
-.hero-link::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: -0.62em;
-  width: 14px;
-  height: 14px;
-  transform: translateX(-50%) scale(0.4);
-  background: currentColor;
-  opacity: 0;
-  -webkit-mask: url('mark.svg') center / contain no-repeat;
-  mask: url('mark.svg') center / contain no-repeat;
-  transition: opacity 220ms ease, transform 320ms var(--out-ease);
-  pointer-events: none;
-}
-
-.hero-link:hover::after {
-  opacity: 0.55;
-  transform: translateX(-50%) scale(1);
-}
-
 .hero-foot {
   position: absolute;
   left: 50%;
@@ -607,7 +570,7 @@ body.is-scrolled .hero-foot {
 /* --- Section scaffolding -------------------------------------------------- */
 
 .section {
-  padding-block: clamp(44px, 6vw, 72px);
+  padding-block: clamp(56px, 8vw, 96px);
   scroll-margin-top: calc(var(--header-height) + 24px);
 }
 
@@ -620,7 +583,7 @@ body.is-scrolled .hero-foot {
   align-items: baseline;
   justify-content: space-between;
   gap: 24px;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 
 .eyebrow {
@@ -747,6 +710,19 @@ code {
   color: var(--ink);
 }
 
+.fact dd a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--rule-strong);
+  text-decoration-thickness: 0.05em;
+  text-underline-offset: 0.16em;
+  transition: text-decoration-color 160ms ease;
+}
+
+.fact dd a:hover {
+  text-decoration-color: currentColor;
+}
+
 /* --- Timeline (experience) ------------------------------------------------ */
 
 .timeline {
@@ -829,11 +805,12 @@ code {
 .entry-points li::before {
   content: '';
   position: absolute;
-  left: 0;
-  top: 0.66em;
-  width: 6px;
-  height: 1px;
-  background: var(--ink-ghost);
+  left: 1px;
+  top: 0.58em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--ink-faint);
 }
 
 /* --- Work (projects) ------------------------------------------------------ */
@@ -845,6 +822,10 @@ code {
 }
 
 .work-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 264px;
+  gap: 10px 36px;
+  align-items: start;
   padding: 44px 0 46px;
   border-bottom: 1px solid var(--rule);
 }
@@ -880,6 +861,38 @@ code {
   letter-spacing: 0.05em;
   color: var(--ink-faint);
 }
+
+/* Small hand-drawn preview beside each project: the visual evidence next to
+   the words. */
+.work-shot {
+  border: 1px solid var(--rule);
+  background: color-mix(in srgb, var(--paper) 90%, transparent);
+  padding: 10px 12px;
+}
+
+.work-shot svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ws-frame { fill: none; stroke: var(--rule-strong); }
+.ws-box { fill: none; stroke: var(--ink-faint); }
+.ws-center { fill: none; stroke: var(--ink-soft); stroke-width: 1.4; }
+.ws-line { stroke: var(--rule); }
+.ws-dot { fill: var(--ink-ghost); }
+.ws-t { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.04em; fill: var(--ink-faint); }
+.ws-t.dim { fill: var(--ink-ghost); }
+.ws-t.ink { fill: var(--ink-soft); }
+.ws-t.ws-red { fill: var(--paper); }
+.ws-barbg { fill: var(--rule); }
+.ws-bar { fill: var(--ink-faint); }
+.ws-check { fill: none; stroke: var(--ink-soft); stroke-width: 1.6; }
+.ws-face { fill: none; stroke: var(--ink-faint); }
+.ws-redact { fill: var(--ink-soft); }
+.ws-band { fill: var(--rule); }
+.ws-actual { fill: none; stroke: var(--ink-soft); stroke-width: 1.6; }
+.ws-forecast { fill: none; stroke: var(--ink-faint); stroke-width: 1.4; stroke-dasharray: 3 3; }
 
 .link-quiet {
   display: inline-flex;
@@ -1157,11 +1170,12 @@ code {
 .cert-list li::before {
   content: '';
   position: absolute;
-  left: 0;
-  top: 0.62em;
-  width: 6px;
-  height: 1px;
-  background: var(--ink-ghost);
+  left: 1px;
+  top: 0.58em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--ink-faint);
 }
 
 /* --- Contact -------------------------------------------------------------- */
@@ -1360,6 +1374,15 @@ body.menu-open {
 
   .facts {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .work-item {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+  }
+
+  .work-shot {
+    max-width: 380px;
   }
 }
 

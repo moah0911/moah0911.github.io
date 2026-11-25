@@ -93,8 +93,8 @@
     <main id="top">
       <section class="hero" aria-label="Introduction">
         <p class="hero-line">
-          Agents that ship. <a class="hero-link" href="https://thegowtham.medium.com/" target="_blank" rel="noopener noreferrer">Docs</a> that read.
-          All of it in the <a class="hero-link" href="https://github.com/moah0911" target="_blank" rel="noopener noreferrer">open</a>.
+          I'm Boyina Gowtham. I build agents that ship,
+          and write the docs that get read.
         </p>
 
         <p class="hero-foot"><span class="thread" aria-hidden="true"></span> scroll to read</p>
@@ -109,6 +109,7 @@
               <p class="eyebrow"><span class="num">01</span> About</p>
               <p class="head-note">Visakhapatnam, India</p>
             </div>
+            <h2 class="section-title">The short version</h2>
 
             <p class="prose lead">
               I'm Boyina Gowtham, an AI engineer and technical writer.
@@ -118,12 +119,12 @@
 
             <div class="prose" style="margin-top: 1.1em;">
               <p>
-                Most of my work sits where a model meets a real workflow: a PR that has
-                to be reviewed by a different vendor's model before it merges, a clinical
-                PDF that has to resolve to the right ICD-10 code with a confidence score,
-                a browser agent that has to redact a face before any context leaves the
-                machine. The interesting part is rarely the model call. It is the queue,
-                the retry semantics, the schema and the failure message.
+                Most of my work sits where a model meets a real workflow: a pull request
+                reviewed by a different vendor's model before it merges, a clinical PDF
+                resolved to the right ICD-10 code with a confidence score, a face redacted
+                on-device before any context leaves the machine. The interesting part is
+                rarely the model call. It is the queue, the retry semantics, the schema
+                and the failure message.
               </p>
               <p>
                 I write about the same things: weekly posts on agent architectures and
@@ -140,11 +141,11 @@
               </div>
               <div class="fact">
                 <dt>Open source</dt>
-                <dd>18 merged pull requests<br>Python, TypeScript and Rust</dd>
+                <dd><a href="https://github.com/moah0911" target="_blank" rel="noopener noreferrer">18 merged pull requests</a><br>Python, TypeScript and Rust</dd>
               </div>
               <div class="fact">
                 <dt>Writing</dt>
-                <dd>Medium, featured in Towards AI and Level Up Coding</dd>
+                <dd><a href="https://thegowtham.medium.com/" target="_blank" rel="noopener noreferrer">Medium</a>, featured in Towards AI and Level Up Coding</dd>
               </div>
               <div class="fact">
                 <dt>Recognition</dt>
@@ -159,6 +160,7 @@
               <p class="eyebrow"><span class="num">02</span> Experience</p>
               <p class="head-note">2024–2026</p>
             </div>
+            <h2 class="section-title">Where I've worked</h2>
 
             <div class="timeline">
               <article class="entry">
@@ -258,98 +260,234 @@
               <p class="eyebrow"><span class="num">03</span> Work</p>
               <p class="head-note">Six of them</p>
             </div>
+            <h2 class="section-title">Things I've built</h2>
 
             <div class="work-list">
               <article class="work-item">
-                <div class="work-head">
-                  <h3 class="work-name">Kettle</h3>
-                  <a class="link-quiet" href="https://github.com/moah0911/kettle" target="_blank" rel="noopener noreferrer">Code <span class="up" aria-hidden="true">↗</span></a>
+                <div class="work-main">
+                  <div class="work-head">
+                    <h3 class="work-name">Kettle</h3>
+                    <a class="link-quiet" href="https://github.com/moah0911/kettle" target="_blank" rel="noopener noreferrer">Code <span class="up" aria-hidden="true">↗</span></a>
+                  </div>
+                  <p class="work-desc">
+                    A self-hosted agent team that turns a request into a reviewed pull
+                    request: triage, spec, implement, then a review by a
+                    <em>different vendor's</em> model, capped at two revision cycles.
+                  </p>
+                  <p class="work-stack">Python · FastAPI · Temporal · Postgres · Kubernetes · LiteLLM · MCP</p>
                 </div>
-                <p class="work-desc">
-                  A self-hosted agent team that turns a request into a reviewed pull request:
-                  triage, spec, implement, then a review by a <em>different vendor's</em> model,
-                  capped at two revision cycles. The factory is configuration; the
-                  orchestration is durable.
-                </p>
-                <p class="work-stack">Python · FastAPI · Temporal · Postgres · Kubernetes · LiteLLM · MCP</p>
+                <div class="work-shot" aria-hidden="true">
+                  <svg viewBox="0 0 320 200">
+                    <rect class="ws-frame" x="8" y="8" width="304" height="184" rx="6"/>
+                    <line class="ws-line" x1="8" y1="32" x2="312" y2="32"/>
+                    <circle class="ws-dot" cx="22" cy="20" r="2.5"/><circle class="ws-dot" cx="33" cy="20" r="2.5"/><circle class="ws-dot" cx="44" cy="20" r="2.5"/>
+                    <text class="ws-t ink" x="22" y="56">$ kettle run "add rate limiting"</text>
+                    <g class="ws-box">
+                      <rect x="22" y="72" width="52" height="24" rx="3"/>
+                      <rect x="86" y="72" width="52" height="24" rx="3"/>
+                      <rect x="150" y="72" width="52" height="24" rx="3"/>
+                      <rect x="214" y="72" width="52" height="24" rx="3"/>
+                    </g>
+                    <g class="ws-line">
+                      <line x1="74" y1="84" x2="86" y2="84"/>
+                      <line x1="138" y1="84" x2="150" y2="84"/>
+                      <line x1="202" y1="84" x2="214" y2="84"/>
+                    </g>
+                    <g class="ws-t" text-anchor="middle">
+                      <text x="48" y="88">triage</text>
+                      <text x="112" y="88">spec</text>
+                      <text x="176" y="88">code</text>
+                      <text x="240" y="88">review</text>
+                    </g>
+                    <text class="ws-t dim" x="22" y="126">review by a different vendor's model</text>
+                    <text class="ws-t dim" x="22" y="140">capped at two revision cycles</text>
+                    <polyline class="ws-check" points="22,158 27,163 37,151"/>
+                    <text class="ws-t ink" x="45" y="162">PR #42 merged</text>
+                  </svg>
+                </div>
               </article>
 
               <article class="work-item">
-                <div class="work-head">
-                  <h3 class="work-name">Rack</h3>
-                  <a class="link-quiet" href="https://github.com/moah0911/Rack" target="_blank" rel="noopener noreferrer">Code <span class="up" aria-hidden="true">↗</span></a>
+                <div class="work-main">
+                  <div class="work-head">
+                    <h3 class="work-name">Rack</h3>
+                    <a class="link-quiet" href="https://github.com/moah0911/Rack" target="_blank" rel="noopener noreferrer">Code <span class="up" aria-hidden="true">↗</span></a>
+                  </div>
+                  <p class="work-desc">
+                    A CLI that reads clinical PDFs, images and plain text, and links them to
+                    ICD-10, RxNorm and SNOMED CT. Every mapping carries a confidence score,
+                    with a Bedrock fallback when the services miss.
+                  </p>
+                  <p class="work-stack">Python · Strands Agents · Amazon Bedrock · NLM Clinical Tables</p>
                 </div>
-                <p class="work-desc">
-                  A CLI that reads clinical PDFs, images and plain text, then links diagnoses
-                  to ICD-10, medications to RxNorm and procedures to SNOMED CT. Every mapping
-                  carries a confidence score, and lookups fall back to Bedrock when the
-                  terminology services miss.
-                </p>
-                <p class="work-stack">Python · Strands Agents · Amazon Bedrock · NLM Clinical Tables</p>
+                <div class="work-shot" aria-hidden="true">
+                  <svg viewBox="0 0 320 200">
+                    <rect class="ws-frame" x="8" y="8" width="304" height="184" rx="6"/>
+                    <line class="ws-line" x1="8" y1="32" x2="312" y2="32"/>
+                    <circle class="ws-dot" cx="22" cy="20" r="2.5"/><circle class="ws-dot" cx="33" cy="20" r="2.5"/><circle class="ws-dot" cx="44" cy="20" r="2.5"/>
+                    <text class="ws-t ink" x="22" y="58">$ rack read report.pdf</text>
+                    <text class="ws-t" x="22" y="84">ICD-10    J20.9</text>
+                    <rect class="ws-barbg" x="150" y="77" width="118" height="6" rx="3"/>
+                    <rect class="ws-bar" x="150" y="77" width="114" height="6" rx="3"/>
+                    <text class="ws-t dim" x="274" y="84">0.97</text>
+                    <text class="ws-t" x="22" y="106">RxNorm    617314</text>
+                    <rect class="ws-barbg" x="150" y="99" width="118" height="6" rx="3"/>
+                    <rect class="ws-bar" x="150" y="99" width="107" height="6" rx="3"/>
+                    <text class="ws-t dim" x="274" y="106">0.91</text>
+                    <text class="ws-t" x="22" y="128">SNOMED    54766006</text>
+                    <rect class="ws-barbg" x="150" y="121" width="118" height="6" rx="3"/>
+                    <rect class="ws-bar" x="150" y="121" width="103" height="6" rx="3"/>
+                    <text class="ws-t dim" x="274" y="128">0.88</text>
+                    <text class="ws-t dim" x="22" y="162">Bedrock fallback when the services miss</text>
+                  </svg>
+                </div>
               </article>
 
               <article class="work-item">
-                <div class="work-head">
-                  <h3 class="work-name">Sick</h3>
-                  <a class="link-quiet" href="https://github.com/moah0911/sick" target="_blank" rel="noopener noreferrer">Code <span class="up" aria-hidden="true">↗</span></a>
+                <div class="work-main">
+                  <div class="work-head">
+                    <h3 class="work-name">Sick</h3>
+                    <a class="link-quiet" href="https://github.com/moah0911/sick" target="_blank" rel="noopener noreferrer">Code <span class="up" aria-hidden="true">↗</span></a>
+                  </div>
+                  <p class="work-desc">
+                    An object-oriented coding agent that reads, writes and edits code, and
+                    patches its own source to get better at it. Attach files with
+                    <code>@file</code>, drop to a shell with <code>!cmd</code>.
+                  </p>
+                  <p class="work-stack">Python · NVIDIA OO-Agents · TUI · sandboxed bash</p>
                 </div>
-                <p class="work-desc">
-                  An object-oriented coding agent that reads, writes and edits code, and
-                  patches its own source to get better at it. Attach files with
-                  <code>@file</code>, drop to a shell with <code>!cmd</code>, and let it keep
-                  experience memory between runs.
-                </p>
-                <p class="work-stack">Python · NVIDIA OO-Agents · TUI · sandboxed bash</p>
+                <div class="work-shot" aria-hidden="true">
+                  <svg viewBox="0 0 320 200">
+                    <rect class="ws-frame" x="8" y="8" width="304" height="184" rx="6"/>
+                    <line class="ws-line" x1="8" y1="32" x2="312" y2="32"/>
+                    <circle class="ws-dot" cx="22" cy="20" r="2.5"/><circle class="ws-dot" cx="33" cy="20" r="2.5"/><circle class="ws-dot" cx="44" cy="20" r="2.5"/>
+                    <text class="ws-t ink" x="22" y="58">$ sick "fix the retry backoff"</text>
+                    <text class="ws-t dim" x="22" y="86">@file src/agent.py    !pytest -q</text>
+                    <text class="ws-t dim" x="22" y="108">patched src/agent.py  (+12 -4)</text>
+                    <polyline class="ws-check" points="22,130 27,135 37,123"/>
+                    <text class="ws-t ink" x="45" y="134">162 tests passing</text>
+                    <text class="ws-t dim" x="22" y="166">keeps experience memory between runs</text>
+                  </svg>
+                </div>
               </article>
 
               <article class="work-item">
-                <div class="work-head">
-                  <h3 class="work-name">Vision</h3>
-                  <a class="link-quiet" href="https://github.com/moah0911/Vision" target="_blank" rel="noopener noreferrer">Code <span class="up" aria-hidden="true">↗</span></a>
+                <div class="work-main">
+                  <div class="work-head">
+                    <h3 class="work-name">Vision</h3>
+                    <a class="link-quiet" href="https://github.com/moah0911/Vision" target="_blank" rel="noopener noreferrer">Code <span class="up" aria-hidden="true">↗</span></a>
+                  </div>
+                  <p class="work-desc">
+                    An on-device vision transformer reads the screen and redacts faces,
+                    passwords, card numbers and identity numbers before any context leaves
+                    the machine. The server only ever answers with click, fill, scroll or say.
+                  </p>
+                  <p class="work-stack">TypeScript · WebGPU · Transformers.js · FastAPI</p>
                 </div>
-                <p class="work-desc">
-                  An on-device vision transformer reads the screen and redacts faces,
-                  passwords, email addresses, card numbers and Indian identity numbers
-                  before any context leaves the machine. The server only ever answers with
-                  click, fill, scroll or say.
-                </p>
-                <p class="work-stack">TypeScript · WebGPU · Transformers.js · FastAPI</p>
+                <div class="work-shot" aria-hidden="true">
+                  <svg viewBox="0 0 320 200">
+                    <rect class="ws-frame" x="8" y="8" width="304" height="184" rx="6"/>
+                    <line class="ws-line" x1="8" y1="32" x2="312" y2="32"/>
+                    <circle class="ws-dot" cx="22" cy="20" r="2.5"/><circle class="ws-dot" cx="33" cy="20" r="2.5"/><circle class="ws-dot" cx="44" cy="20" r="2.5"/>
+                    <rect class="ws-box" x="22" y="50" width="276" height="100" rx="4"/>
+                    <text class="ws-t dim" x="32" y="66">viewport</text>
+                    <circle class="ws-face" cx="160" cy="98" r="24"/>
+                    <path class="ws-face" d="M128 138 q32 -20 64 0"/>
+                    <rect class="ws-redact" x="132" y="86" width="56" height="22" rx="2"/>
+                    <text class="ws-t ws-red" x="160" y="101" text-anchor="middle">redacted</text>
+                    <text class="ws-t dim" x="22" y="172">on-device WebGPU · nothing leaves the machine</text>
+                  </svg>
+                </div>
               </article>
 
               <article class="work-item">
-                <div class="work-head">
-                  <h3 class="work-name">BudgetWise</h3>
-                  <a class="link-quiet" href="https://github.com/moah0911/BudgetWise-AI-based-Expense-Forecasting-Tool" target="_blank" rel="noopener noreferrer">Code <span class="up" aria-hidden="true">↗</span></a>
+                <div class="work-main">
+                  <div class="work-head">
+                    <h3 class="work-name">BudgetWise</h3>
+                    <a class="link-quiet" href="https://github.com/moah0911/BudgetWise-AI-based-Expense-Forecasting-Tool" target="_blank" rel="noopener noreferrer">Code <span class="up" aria-hidden="true">↗</span></a>
+                  </div>
+                  <p class="work-desc">
+                    Expense forecasting with the benchmark done properly: eleven models,
+                    30,000+ records, five metrics. XGBoost won at 14.5% MAPE with sub-second
+                    inference; the dashboard adds confidence intervals and anomaly flags.
+                  </p>
+                  <p class="work-stack">Python · XGBoost · LSTM · N-BEATS · Streamlit</p>
                 </div>
-                <p class="work-desc">
-                  Expense forecasting with the benchmark done properly: eleven models across
-                  four families, 30,000+ records, five metrics. XGBoost won at 14.5% MAPE with
-                  sub-second inference; the dashboard adds confidence intervals and anomaly
-                  flags.
-                </p>
-                <p class="work-stack">Python · XGBoost · LSTM · N-BEATS · Streamlit</p>
+                <div class="work-shot" aria-hidden="true">
+                  <svg viewBox="0 0 320 200">
+                    <rect class="ws-frame" x="8" y="8" width="304" height="184" rx="6"/>
+                    <line class="ws-line" x1="8" y1="32" x2="312" y2="32"/>
+                    <circle class="ws-dot" cx="22" cy="20" r="2.5"/><circle class="ws-dot" cx="33" cy="20" r="2.5"/><circle class="ws-dot" cx="44" cy="20" r="2.5"/>
+                    <line class="ws-line" x1="34" y1="146" x2="298" y2="146"/>
+                    <line class="ws-line" x1="34" y1="44" x2="34" y2="146"/>
+                    <polygon class="ws-band" points="34,114 74,104 114,110 154,86 194,92 234,68 274,74 298,54 298,74 274,94 234,88 194,112 154,106 114,130 74,124 34,134"/>
+                    <polyline class="ws-actual" points="34,120 74,110 114,116 154,92 194,98 234,74 274,80 298,60"/>
+                    <polyline class="ws-forecast" points="34,124 74,114 114,120 154,96 194,102 234,78 274,84 298,64"/>
+                    <line class="ws-actual" x1="196" y1="54" x2="218" y2="54"/>
+                    <text class="ws-t dim" x="224" y="57">actual</text>
+                    <line class="ws-forecast" x1="196" y1="68" x2="218" y2="68"/>
+                    <text class="ws-t dim" x="224" y="71">forecast</text>
+                    <text class="ws-t ink" x="34" y="172">XGBoost · 14.5% MAPE · sub-second inference</text>
+                  </svg>
+                </div>
               </article>
 
               <article class="work-item">
-                <div class="work-head">
-                  <h3 class="work-name">Ignisengine</h3>
-                  <a class="link-quiet" href="https://github.com/moah0911/Ignisengine" target="_blank" rel="noopener noreferrer">Code <span class="up" aria-hidden="true">↗</span></a>
+                <div class="work-main">
+                  <div class="work-head">
+                    <h3 class="work-name">Ignisengine</h3>
+                    <a class="link-quiet" href="https://github.com/moah0911/Ignisengine" target="_blank" rel="noopener noreferrer">Code <span class="up" aria-hidden="true">↗</span></a>
+                  </div>
+                  <p class="work-desc">
+                    Six specialised agents (security, product, dev, QA, prioritisation,
+                    synthesis) turn one sentence into a complete PRD, streamed over SSE
+                    with Markdown and PDF export.
+                  </p>
+                  <p class="work-stack">Python · Gemini 2.0 Flash · Flask · Supabase</p>
                 </div>
-                <p class="work-desc">
-                  Six specialised agents (security, product, dev, QA, prioritisation,
-                  synthesis) turn one sentence into a complete PRD, streamed over SSE with
-                  Markdown and PDF export.
-                </p>
-                <p class="work-stack">Python · Gemini 2.0 Flash · Flask · Supabase</p>
+                <div class="work-shot" aria-hidden="true">
+                  <svg viewBox="0 0 320 200">
+                    <rect class="ws-frame" x="8" y="8" width="304" height="184" rx="6"/>
+                    <line class="ws-line" x1="8" y1="32" x2="312" y2="32"/>
+                    <circle class="ws-dot" cx="22" cy="20" r="2.5"/><circle class="ws-dot" cx="33" cy="20" r="2.5"/><circle class="ws-dot" cx="44" cy="20" r="2.5"/>
+                    <g class="ws-line">
+                      <line x1="160" y1="100" x2="48" y2="52"/>
+                      <line x1="160" y1="100" x2="48" y2="148"/>
+                      <line x1="160" y1="100" x2="160" y2="42"/>
+                      <line x1="160" y1="100" x2="160" y2="158"/>
+                      <line x1="160" y1="100" x2="272" y2="52"/>
+                      <line x1="160" y1="100" x2="272" y2="148"/>
+                    </g>
+                    <g class="ws-box">
+                      <rect x="25" y="41" width="46" height="22" rx="3"/>
+                      <rect x="25" y="137" width="46" height="22" rx="3"/>
+                      <rect x="137" y="31" width="46" height="22" rx="3"/>
+                      <rect x="137" y="147" width="46" height="22" rx="3"/>
+                      <rect x="249" y="41" width="46" height="22" rx="3"/>
+                      <rect x="249" y="137" width="46" height="22" rx="3"/>
+                    </g>
+                    <rect class="ws-center" x="132" y="86" width="56" height="28" rx="4"/>
+                    <g class="ws-t" text-anchor="middle">
+                      <text x="48" y="55">sec</text>
+                      <text x="48" y="151">qa</text>
+                      <text x="160" y="45">dev</text>
+                      <text x="160" y="161">prio</text>
+                      <text x="272" y="55">prod</text>
+                      <text x="272" y="151">syn</text>
+                    </g>
+                    <text class="ws-t ink" x="160" y="104" text-anchor="middle">PRD</text>
+                    <text class="ws-t dim" x="160" y="184" text-anchor="middle">one sentence in · full PRD streamed out (SSE)</text>
+                  </svg>
+                </div>
               </article>
             </div>
 
             <p class="os-note">
               Also:
-              <a href="https://github.com/moah0911/contextify" target="_blank" rel="noopener noreferrer">Contextify</a>, a scraper that turns a shared AI chat into a structured context file;
-              <a href="https://github.com/moah0911/Demon" target="_blank" rel="noopener noreferrer">Demon</a>, a Rust interpreter with a garbage collector;
+              <a href="https://github.com/moah0911/contextify" target="_blank" rel="noopener noreferrer">Contextify</a>, a chat-to-context scraper;
+              <a href="https://github.com/moah0911/Demon" target="_blank" rel="noopener noreferrer">Demon</a>, a Rust interpreter with a GC;
               <a href="https://github.com/moah0911/algozen" target="_blank" rel="noopener noreferrer">AlgoZen</a>, 55 modules on PyPI;
-              <a href="https://github.com/moah0911/curdos" target="_blank" rel="noopener noreferrer">CURD</a>, a client-side PDF workbench with 20+ tools.
+              <a href="https://github.com/moah0911/curdos" target="_blank" rel="noopener noreferrer">CURD</a>, a client-side PDF workbench.
             </p>
           </section>
 
@@ -359,6 +497,7 @@
               <p class="eyebrow"><span class="num">04</span> Open source</p>
               <p class="head-note">Reproduce, fix, test</p>
             </div>
+            <h2 class="section-title">Merged upstream</h2>
 
             <p class="prose" style="margin-bottom: 26px;">
               Every one of these is a reproduced bug with a root cause, a fix and a test,
@@ -377,8 +516,8 @@
                 <p class="os-what">
                   Codex Security silently dropped <code>.cgi</code>, <code>.pl</code>,
                   <code>.pm</code> and <code>.t</code> files from its diff inventory
-                  through a fixed extension allowlist. I verified the shipped fix, then
-                  added the missing test coverage.
+                  through a fixed extension allowlist. Verified the shipped fix, added
+                  the missing tests.
                 </p>
                 <div class="os-links">
                   <a class="link-quiet" href="https://github.com/openai/codex-security/pull/2109" target="_blank" rel="noopener noreferrer">PR #2109 <span class="up" aria-hidden="true">↗</span></a>
@@ -388,9 +527,9 @@
               <article class="os-row">
                 <h3 class="os-repo"><span><span class="owner">awslabs/</span>cli-agent-orchestrator</span> <span class="lang">Python · Oct 2026</span></h3>
                 <p class="os-what">
-                  Terminal ids are eight hex characters, and after a terminal was deleted
-                  its id stayed resolvable for fourteen days through the idempotency table,
-                  so a retry could resolve to a stale terminal. Fix plus a new test file.
+                  A deleted terminal's id stayed resolvable for fourteen days through the
+                  idempotency table, so a retry could land on a stale terminal.
+                  Fix plus a new test file.
                 </p>
                 <div class="os-links">
                   <a class="link-quiet" href="https://github.com/awslabs/cli-agent-orchestrator/pull/1129" target="_blank" rel="noopener noreferrer">PR #1129 <span class="up" aria-hidden="true">↗</span></a>
@@ -413,8 +552,8 @@
                 <h3 class="os-repo"><span><span class="owner">browseros-ai/</span>BrowserOS</span> <span class="lang">Rust · Nov 2026</span></h3>
                 <p class="os-what">
                   OpenCode 2.x only reads servers from <code>mcp.servers.*</code>, so the
-                  provisioned entry was silently ignored entirely. Fixed the read and the
-                  write path, and kept a UTF-8 BOM intact through edits.
+                  provisioned entry was silently ignored. Fixed read and write paths,
+                  kept a UTF-8 BOM intact through edits.
                 </p>
                 <div class="os-links">
                   <a class="link-quiet" href="https://github.com/browseros-ai/BrowserOS/pull/3003" target="_blank" rel="noopener noreferrer">PR #3003 <span class="up" aria-hidden="true">↗</span></a>
@@ -447,6 +586,7 @@
               <p class="eyebrow"><span class="num">05</span> Writing</p>
               <p class="head-note">Weekly, mostly</p>
             </div>
+            <h2 class="section-title">Words for builders</h2>
 
             <div class="writing-grid">
               <a class="write-card" href="https://thegowtham.medium.com/" target="_blank" rel="noopener noreferrer">
@@ -478,6 +618,7 @@
               <p class="eyebrow"><span class="num">06</span> Skills</p>
               <p class="head-note">What I reach for</p>
             </div>
+            <h2 class="section-title">The toolkit</h2>
 
             <div class="skill-groups">
               <div class="skill-group">
@@ -557,6 +698,7 @@
               <p class="eyebrow"><span class="num">07</span> Certifications</p>
               <p class="head-note">26 courses</p>
             </div>
+            <h2 class="section-title">Courses and programs</h2>
 
             <div class="cert-groups">
               <details class="cert-group" open>
